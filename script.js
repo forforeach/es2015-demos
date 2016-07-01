@@ -1,10 +1,17 @@
-function Dialog(title,
-    { width, height, draggable } = {}) {
+function Dialog(title, options = {}) {
 
-    this.title = title || 'Hello';
-    this.width = width || 200;
-    this.height = height || 300;
-    this.draggable = draggable || true;
+    let defaults = {
+        width: 200,
+        height: 300,
+        draggable: true
+    };
+
+    let settings = Object.assign({}, defaults, options);
+
+    this.title = title;
+    this.width = settings.width;
+    this.height = settings.height;
+    this.draggable = settings.draggable;
 }
 
 var dialogDefault = new Dialog('Default Dialog', {
