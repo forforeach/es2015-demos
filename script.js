@@ -15,5 +15,5 @@ function getTags(entity, id, callback) {
 }
 
 getTags(1, 1, function (tagsArray) {
-    addTags(tagsArray);
+    addTags(...tagsArray);
 });
