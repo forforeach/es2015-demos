@@ -1,10 +1,6 @@
 function createContact(firstName, lastName) {
     let fullName = firstName + ' ' + lastName;
-    return {
-        firstName: firstName,
-        lastName: lastName,
-        fullName: fullName
-    }
+    return { firstName, lastName, fullName };
 }
 
 let contact = createContact('Dima', 'Kuzmich');
