@@ -1,10 +1,9 @@
-function isArrayTooLong(array) {
-    const MAX_LENGTH = 3;
-    if (array.length > MAX_LENGTH) {
-        return true;
-    } else {
-        return false;
-    }
+function printArray(array) {
+    array = Array.isArray(array) ? array : [];
+    array.forEach(function (element) {
+        console.log(element);
+    });
 }
 
-isArrayTooLong();
+printArray([1, 2, 3, 4, 5]);
+printArray();
