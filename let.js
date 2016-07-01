@@ -1,7 +1,6 @@
 // The hoisting
 
 function greet(name) {
-
     if (name) {
         let message = 'Hello, ' + name;
         console.log(message);
