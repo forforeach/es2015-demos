@@ -1,5 +1,4 @@
-function printArray(array) {
-    array = Array.isArray(array) ? array : [];
+function printArray(array = []) {
     array.forEach(function (element) {
         console.log(element);
     });
