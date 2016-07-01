@@ -1,19 +1,15 @@
-function addTag(tag) {
-    console.log(tag + ' was added');
+function TagsVM(entity, record) {
+    this.entity = entity;
+    this.record = record;
+    this.tags;
 }
 
-function addTags(...tags) {
-    tags.forEach(function (tag) {
-        addTag(tag);
-    });
-}
-
-function getTags(entity, id, callback) {
+TagsVM.prototype.loadTags = function (...tags) {
     setTimeout(function () {
-        callback(['async', 'tags', 'grabbed']);
+        this.tags = ['async', 'tags', 'grabbed'];
     });
 }
+var tagsVM = new TagsVM(1, 1);
+tagsVM.loadTags();
 
-getTags(1, 1, function (tagsArray) {
-    addTags(...tagsArray);
-});
+console.log(tagsVM.tags);
