@@ -3,8 +3,9 @@ function createContact(firstName, lastName) {
     return { firstName, lastName, fullName };
 }
 
-let contact = createContact('Dima', 'Kuzmich');
+let {firstName, lastName, fullName}
+    = createContact('Dima', 'Kuzmich');
 
-console.log(contact.firstName);
-console.log(contact.lastName);
-console.log(contact.fullName);
+console.log(firstName);
+console.log(lastName);
+console.log(fullName);
