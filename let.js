@@ -5,8 +5,7 @@ function async(param, callback) {
 }
 
 function proceedAsync(params) {
-    // foreach loop
-    for (var i = 0; i < params.length; i++) {
+    for (let i = 0; i < params.length; i++) {
         async(params[i], function () {
             console.log('response for ' + params[i]);
         });
