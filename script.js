@@ -3,7 +3,7 @@ function createContact(firstName, lastName) {
     return {
         firstName,
         lastName,
-        printFullName: function () {
+        printFullName() {
             console.log(fullName);
         }
     };
