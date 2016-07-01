@@ -3,9 +3,9 @@ function addTag(tag) {
 }
 
 function addTags() {
-    var args = Array.prototype.slice.call(arguments);
+    var tags = Array.prototype.slice.call(arguments);
 
-    args.forEach(function (tag) {
+    tags.forEach(function (tag) {
         addTag(tag);
     });
 }
