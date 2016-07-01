@@ -1,13 +1,21 @@
-function createContact(firstName, lastName) {
-    let fullName = `${firstName} ${lastName}`;
-    return {
-        firstName,
-        lastName,
-        printFullName() {
-            console.log(fullName);
-        }
-    };
-}
+console.log(`Hello
 
-let contact = createContact('Dima', 'Kuzmich');
-contact.printFullName();
+world!
+
+I'm
+
+printing
+
+with
+
+new
+
+lines
+
+all
+
+the
+
+way
+
+ `);
