@@ -8,4 +8,12 @@ function addTags(...tags) {
     });
 }
 
-addTags('new', 'cool', 'feature');
+function getTags(entity, id, callback) {
+    setTimeout(function () {
+        callback(['async', 'tags', 'grabbed']);
+    });
+}
+
+getTags(1, 1, function (tagsArray) {
+    addTags(tagsArray);
+});
