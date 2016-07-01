@@ -5,4 +5,6 @@ function createContact(firstName, lastName) {
 
 let contact = createContact('Dima', 'Kuzmich');
 
-console.log(JSON.stringify(contact, null, 2));
+console.log(contact.firstName);
+console.log(contact.lastName);
+console.log(contact.fullName);
