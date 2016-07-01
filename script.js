@@ -1,8 +1,10 @@
-function Dialog(title, options = {}) {
+function Dialog(title,
+    { width, height, draggable } = {}) {
+
     this.title = title;
-    this.width = options.width;
-    this.height = options.height;
-    this.draggable = options.draggable;
+    this.width = width;
+    this.height = height;
+    this.draggable = draggable;
 }
 
 var dialog = new Dialog('Dialog', {
