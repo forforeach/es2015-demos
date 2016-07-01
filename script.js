@@ -1,22 +1,13 @@
-function Dialog(title,
-    { width, height, draggable } = {}) {
-
-    this.title = title;
-    this.width = width;
-    this.height = height;
-    this.draggable = draggable;
+function addTag(tag) {
+    console.log(tag + ' was added');
 }
 
-var dialog = new Dialog('Dialog', {
-    width: 100,
-    height: 200,
-    draggable: false
-});
+function addTags() {
+    var args = Array.prototype.slice.call(arguments);
 
-console.log('dialog',
-    JSON.stringify(dialog, null, 2));
+    args.forEach(function (tag) {
+        addTag(tag);
+    });
+}
 
-var dialogDefault = new Dialog('Default Dialog');
-
-console.log('dialogDefault',
-    JSON.stringify(dialogDefault, null, 2));
+addTags('new', 'cool', 'feature');
