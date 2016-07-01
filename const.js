@@ -1,5 +1,9 @@
 function isArrayTooLong(array) {
-    if (array.length > 3) {
+    // var maxLength = 3;
+    // const MAX_LENGTH;
+    // MAX_LENGTH = 3;
+    const MAX_LENGTH = 3;
+    if (array.length > MAX_LENGTH) {
         return true;
     } else {
         return false;
