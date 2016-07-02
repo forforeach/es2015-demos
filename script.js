@@ -1,8 +1,13 @@
-let tags = [];
+let tags = new Set();
 
-tags.push('tech');
-tags.push('dev');
-tags.push('es2015');
-tags.push('es2015');
+tags.add('tech');
+tags.add('dev');
+tags.add('es2015');
+tags.add('es2015');
 
-console.log('Total tags ', tags.length);
+console.log('Total tags ', tags.size);
+console.log(tags);
+
+
+let [a, b, c] = tags;
+console.log(a, b, c);
