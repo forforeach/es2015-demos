@@ -48,15 +48,12 @@
 
 	var _logger = __webpack_require__(1);
 
-	var _constants = __webpack_require__(2);
+	var logger = _interopRequireWildcard(_logger);
 
-	var action = void 0;
-	if (_constants.SOME_CONDITION > 10) {
-	    action = _logger.log;
-	} else {
-	    action = _logger.warn;
-	}
-	action('Log from script file');
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	logger.log('Logging');
+	logger.warn('Warning');
 
 /***/ },
 /* 1 */
@@ -74,17 +71,6 @@
 	var warn = exports.warn = function warn(message) {
 	    console.warn(message);
 	};
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SOME_CONDITION = exports.SOME_CONDITION = 5;
 
 /***/ }
 /******/ ]);
