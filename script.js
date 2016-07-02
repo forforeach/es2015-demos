@@ -1,10 +1,8 @@
-let firstUser = { name: 'Dima', isActive: false }
-let secondUser = { name: 'Trololosha', isActive: true };
+let tags = [];
 
-let totalLogins = new Map();
-totalLogins.set(firstUser, 5);
-totalLogins.set(secondUser, 60);
+tags.push('tech');
+tags.push('dev');
+tags.push('es2015');
+tags.push('es2015');
 
-for (let [key, value] of totalLogins) {
-    console.log(`${JSON.stringify(key)} is ${value}`)
-}
+console.log('Total tags ', tags.length);
