@@ -1,7 +1,9 @@
 let tags = ['async', 'tags', 'grabbed'];
 
-let a = tags[0];
-let b = tags[1];
-let c = tags[2];
+let [a, b, c] = tags;
+
+let [x, , y] = tags;
 
 console.log(a, b, c);
+
+console.log(x, y);
