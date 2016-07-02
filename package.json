@@ -1,0 +1,13 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "babel src -d lib",
+        "start": "webpack-dev-server --inline --port 2000"
+    },
+    "babel": {
+        "presets": [
+            "es2015"
+        ]
+    }
+}
