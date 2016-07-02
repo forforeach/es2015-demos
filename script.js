@@ -7,16 +7,15 @@ function Dialog(title,
     this.draggable = draggable;
 }
 
-var dialog = new Dialog('Dialog', {
+Dialog.prototype.open = function () {
+    console.log(this.title,
+        JSON.stringify(dialog, null, 2));
+};
+
+var dialog = new Dialog('My dialog', {
     width: 100,
     height: 200,
     draggable: false
 });
 
-console.log('dialog',
-    JSON.stringify(dialog, null, 2));
-
-var dialogDefault = new Dialog('Default Dialog');
-
-console.log('dialogDefault',
-    JSON.stringify(dialogDefault, null, 2));
+dialog.open();
