@@ -1,19 +1,7 @@
-function addTag(tag) {
-    console.log(tag + ' was added');
-}
+let tags = ['async', 'tags', 'grabbed'];
 
-function addTags(...tags) {
-    tags.forEach(function (tag) {
-        addTag(tag);
-    });
-}
+let a = tags[0];
+let b = tags[1];
+let c = tags[2];
 
-function getTags(entity, id, callback) {
-    setTimeout(function () {
-        callback(['async', 'tags', 'grabbed']);
-    });
-}
-
-getTags(1, 1, function (tagsArray) {
-    addTags(...tagsArray);
-});
+console.log(a, b, c);
