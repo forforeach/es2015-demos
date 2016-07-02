@@ -1,3 +1,8 @@
-let tags = ['async', 'tags', 'grabbed'];
+let users = [
+    { name: 'Dima', isActive: false },
+    { name: 'Trololosha', isActive: true },
+    { name: 'Foo', isActive: true }
+];
 
-tags.forEach(tag => console.log(tag));
+let firstActiveUser = users.find(user => user.isActive);
+console.log(firstActiveUser);
