@@ -48,11 +48,15 @@
 
 	var _logger = __webpack_require__(1);
 
-	var _logger2 = _interopRequireDefault(_logger);
+	var _constants = __webpack_require__(2);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	(0, _logger2.default)('Log from script file');
+	var action = void 0;
+	if (_constants.SOME_CONDITION > 10) {
+	    action = _logger.log;
+	} else {
+	    action = _logger.warn;
+	}
+	action('Log from script file');
 
 /***/ },
 /* 1 */
@@ -63,10 +67,24 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-
-	exports.default = function (message) {
+	var log = exports.log = function log(message) {
 	    console.log(message);
 	};
+
+	var warn = exports.warn = function warn(message) {
+	    console.warn(message);
+	};
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SOME_CONDITION = exports.SOME_CONDITION = 5;
 
 /***/ }
 /******/ ]);
