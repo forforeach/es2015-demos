@@ -1,16 +1,19 @@
-function Dialog(title,
-    { width, height, draggable } = {}) {
+class Dialog {
+    constructor(title,
+        { width, height, draggable } = {}) {
 
-    this.title = title;
-    this.width = width;
-    this.height = height;
-    this.draggable = draggable;
+        this.title = title;
+        this.width = width;
+        this.height = height;
+        this.draggable = draggable;
+    }
+
+    open() {
+        console.log(this.title,
+            JSON.stringify(dialog, null, 2));
+    }
 }
 
-Dialog.prototype.open = function () {
-    console.log(this.title,
-        JSON.stringify(dialog, null, 2));
-};
 
 var dialog = new Dialog('My dialog', {
     width: 100,
