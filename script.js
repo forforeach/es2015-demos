@@ -14,11 +14,32 @@ class Dialog {
     }
 }
 
+class FancyDialog extends Dialog {
+    constructor(title, subtitle,
+        { width, height, draggable, rotate } = {}) {
 
-var dialog = new Dialog('My dialog', {
+        super(title, { width, height, rotate });
+
+        this.subtitle = subtitle;
+        this.rotate = rotate;
+    }
+
+    open() {
+        super.open();
+        if (this.rotate) {
+            this.rotateDialog();
+        }
+    }
+    rotateDialog() {
+        console.log('Rotating...');
+    }
+}
+
+var dialog = new FancyDialog('My fancy dialog', 'Great new features', {
     width: 100,
     height: 200,
-    draggable: false
+    draggable: false,
+    rotate: true
 });
 
 dialog.open();
