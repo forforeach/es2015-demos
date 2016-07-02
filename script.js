@@ -1,8 +1,8 @@
-let users = [
-    { name: 'Dima', isActive: false },
-    { name: 'Trololosha', isActive: true },
-    { name: 'Foo', isActive: true }
-];
+let firstUser = { name: 'Dima', isActive: false }
+let secondUser = { name: 'Trololosha', isActive: true };
 
-let firstActiveUser = users.find(user => user.isActive);
-console.log(firstActiveUser);
+let totalLogins = {};
+totalLogins[firstUser] = 5;
+totalLogins[secondUser] = 60;
+
+console.log(JSON.stringify(totalLogins, null, 2));
