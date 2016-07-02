@@ -1,5 +1,5 @@
 let tags = ['async', 'tags', 'grabbed'];
 
-tags.forEach(function (element) {
-    console.log(element);
-});
+for (let tag of tags) {
+    console.log(tag);
+}
