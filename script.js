@@ -5,4 +5,6 @@ let totalLogins = new Map();
 totalLogins.set(firstUser, 5);
 totalLogins.set(secondUser, 60);
 
-console.log(totalLogins);
+for (let [key, value] of totalLogins) {
+    console.log(`${JSON.stringify(key)} is ${value}`)
+}
