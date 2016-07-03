@@ -1,4 +1,4 @@
 import * as logger from './logger';
+import { get } from './api';
 
-logger.log('Logging');
-logger.warn('Warning');
+get('/tags').then((tags) => logger.log(tags));

@@ -14,6 +14,7 @@ module.exports = {
     path: 'dist',
     filename: 'bundle.js'
   },
+  devtool: 'source-map',
   //enable dev server
   devServer: {
     historyApiFallback: true
